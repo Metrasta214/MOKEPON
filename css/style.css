@@ -1,0 +1,249 @@
+/* Reset de márgenes y paddings para todos los elementos */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales del body */
+body {
+    font-family: 'Poppins', sans-serif; /* Fuente moderna y legible */
+    background: linear-gradient(to bottom right, #1f1c2c, #928dab); /* Fondo degradado oscuro */
+    color: #f0f0f0; /* Color de texto claro */
+    padding: 50px 20px; /* Espaciado interno */
+    min-height: 100vh; /* Altura mínima de la pantalla */
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    font-size: 3em;
+    color: #ffffff;
+    text-shadow: 0 0 10px #9f84ff; /* Efecto de brillo */
+    margin-bottom: 40px;
+}
+
+/* Contenedor general centrado y con fondo transparente */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px); /* Desenfoque del fondo */
+}
+
+/* Sección de selección de mascota */
+#seleccionar-mascota {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Estilos para todos los botones */
+button {
+    background: linear-gradient(145deg, #6a5acd, #7b68ee);
+    border: none;
+    color: white;
+    padding: 14px 36px;
+    font-size: 1.2em;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 20px 10px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 0 12px rgba(138, 43, 226, 0.4);
+}
+
+/* Efecto al pasar el cursor sobre los botones */
+button:hover {
+    background: linear-gradient(145deg, #836fff, #a68eff);
+    transform: scale(1.05); /* Aumenta el tamaño */
+    box-shadow: 0 0 18px #a487ff;
+}
+
+/* Subtítulos */
+h2 {
+    text-align: center;
+    color: #fbcfff;
+    font-weight: bold;
+    font-size: 1.7em;
+    margin-bottom: 25px;
+}
+
+/* Área de mensajes del juego */
+#mensajes {
+    background: rgba(255, 255, 255, 0.07);
+    border: 2px solid #a97fff;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    margin: 40px auto;
+    max-width: 700px;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(174, 133, 255, 0.3);
+    font-size: 1.2em;
+}
+
+/* Sección de reinicio del juego */
+#reiniciar {
+    text-align: center;
+}
+
+/* Pie de página */
+footer {
+    margin-top: 60px;
+    padding: 15px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    color: #bdb5ff;
+    font-size: 0.9em;
+    border-top: 1px solid #6f62e4;
+    border-radius: 0 0 20px 20px;
+}
+
+/* Área de batalla que contiene las mascotas */
+.battle-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+/* Caja de cada mascota */
+.mascota-box {
+    background: radial-gradient(circle at top left, #28243c, #1f1c2c);
+    border: 2px solid #a87fff;
+    border-radius: 20px;
+    width: 220px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px rgba(168, 127, 255, 0.2);
+}
+
+/* Efecto hover para la caja de mascota */
+.mascota-box:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 0 22px rgba(168, 127, 255, 0.4);
+}
+
+/* Texto dentro de cada caja de mascota */
+.mascota-box p {
+    font-size: 1.1em;
+    margin-top: 12px;
+    font-weight: bold;
+    color: #dbd1ff;
+}
+
+/* Contenedor de la imagen de la mascota */
+.imagen-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+}
+
+/* Imagen de la mascota */
+.mascota-img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 3px solid #cdbdff;
+    padding: 10px;
+    background: #2f2b45;
+    box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.05);
+}
+
+/* Clase para animar elementos */
+.animar {
+    animation: pulse 0.4s ease-in-out;
+}
+
+/* Definición de la animación "pulse" */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Contenedor de botones de ataque */
+#ataques {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Estilos individuales de los botones de ataque */
+#ataques button {
+    min-width: 120px;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 128, 128, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Hover sobre los botones de ataque */
+#ataques button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 16px rgba(255, 128, 128, 0.6);
+}
+
+/* Contenedor de la tabla de selección de mascotas */
+.tabla-estatica {
+    background: rgba(255, 255, 255, 0.07);
+    border: 2px solid #a97fff;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 500px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(174, 133, 255, 0.3);
+}
+
+/* Tabla de selección */
+.tabla-estatica table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Celdas y encabezados de la tabla */
+.tabla-estatica th,
+.tabla-estatica td {
+    padding: 10px;
+    color: #dbcfff;
+}
+
+/* Estilo específico de los encabezados */
+.tabla-estatica th {
+    font-weight: bold;
+    border-bottom: 1px solid #a97fff;
+}
+
+/* Estilo específico de las celdas */
+.tabla-estatica td {
+    text-align: center;
+}
+
+/* Imagen de las mascotas en la tabla */
+.tabla-estatica img {
+    border-radius: 10px;
+}
+
+/* Estilo del input radio de selección de mascota */
+.tabla-estatica input[type="radio"] {
+    transform: scale(1.4); /* Aumenta tamaño visual */
+    accent-color: #a87fff; /* Color personalizado para navegadores compatibles */
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- Declaración del tipo de documento: HTML5 -->
+<html lang="es">
+<!-- Inicio del documento HTML en español -->
+
+<head>
+    <!-- Información del encabezado del documento -->
+    <meta charset="UTF-8" />
+    <!-- Define la codificación de caracteres como UTF-8 -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Enlace al archivo de estilos CSS externo -->
+    <title>MOKEPON</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+</head>
+
+<body>
+    <!-- Cuerpo del documento (contenido visible en el navegador) -->
+    <h1>MOKEPON 🔥💧🌎</h1>
+    <!-- Título principal del juego -->
+
+    <section id="seleccionar-mascota">
+        <!-- Sección donde el jugador elige su mascota -->
+        <h2>Elige tu mascota</h2>
+
+        <div class="tabla-estatica">
+            <!-- Contenedor para aplicar estilos a la tabla -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <!-- Encabezado de columna para la imagen -->
+                        <th>Nombre</th>
+                        <!-- Encabezado de columna para el nombre -->
+                        <th>Selección</th>
+                        <!-- Encabezado de columna para el radio button -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Fila para la mascota Hipodoge -->
+                    <tr>
+                        <td><img src="imagenes/Hipodoge.jpg" alt="Hipodoge" width="100" /></td>
+                        <td>Hipodoge</td>
+                        <td><input type="radio" name="mascota" id="Hipodoge" /></td>
+                        <!-- Opción para seleccionar esta mascota -->
+                    </tr>
+                    <!-- Fila para la mascota Capipepo -->
+                    <tr>
+                        <td><img src="imagenes/Capipepo.jpg" alt="Capipepo" width="100" /></td>
+                        <td>Capipepo</td>
+                        <td><input type="radio" name="mascota" id="Capipepo" /></td>
+                    </tr>
+                    <!-- Fila para la mascota Ratigueya -->
+                    <tr>
+                        <td><img src="imagenes/Ratigueya.jpg" alt="Ratigueya" width="100" /></td>
+                        <td>Ratigueya</td>
+                        <td><input type="radio" name="mascota" id="Ratigueya" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button id="boton-mascota" style="margin-top: 15px;">Seleccionar</button>
+        <!-- Botón para confirmar la selección de la mascota -->
+    </section>
+
+    <div class="battle-area">
+        <!-- Área de batalla: muestra la información del jugador y del enemigo -->
+        <div class="mascota-box">
+            <!-- Contenedor de la información de la mascota del jugador -->
+            <p><strong>Tu mascota:</strong> <span id="mascota-jugador"></span> - <strong>Vidas:</strong> <span id="vidas-jugador">3</span></p>
+            <div class="imagen-contenedor">
+                <!-- Imagen de la mascota seleccionada por el jugador -->
+                <img id="imagen-jugador" class="mascota-img" src="" alt="Mascota jugador" />
+            </div>
+        </div>
+        <div class="mascota-box">
+            <!-- Contenedor de la información de la mascota enemiga -->
+            <p><strong>Mascota del enemigo:</strong> <span id="mascota-enemigo"></span> - <strong>Vidas:</strong> <span id="vidas-enemigo">3</span></p>
+            <div class="imagen-contenedor">
+                <!-- Imagen de la mascota seleccionada por el enemigo -->
+                <img id="imagen-enemigo" class="mascota-img" src="" alt="Mascota enemigo" />
+            </div>
+        </div>
+    </div>
+
+    <h2>Elige tu ataque</h2>
+    <!-- Sección para elegir el tipo de ataque -->
+
+    <div id="ataques">
+        <!-- Botones de ataque con diferentes elementos -->
+        <button id="boton-fuego">🔥 Fuego</button>
+        <button id="boton-agua">💧 Agua</button>
+        <button id="boton-tierra">🌱 Tierra</button>
+    </div>
+
+    <section id="mensajes">
+        <!-- Sección donde se mostrarán los mensajes de la batalla dinámicamente -->
+    </section>
+
+    <section id="reiniciar">
+        <!-- Sección que contiene el botón para reiniciar el juego -->
+        <button id="button-reiniciar" onclick="location.reload()">Reiniciar</button>
+        <!-- Al hacer clic se recarga la página para reiniciar el juego -->
+    </section>
+
+    <footer>
+        <!-- Pie de página con información de autor y contexto académico -->
+        Tecnológico Nacional de México campus Pachuca - Programación Web - Evaluación Tema 4 - Alvaro Madrid Morales No. de 23200257
+    </footer>
+
+    <script src="js/cod.js"></script>
+    <!-- Inclusión del archivo JavaScript que contiene la lógica del juego -->
+</body>
+</html>
